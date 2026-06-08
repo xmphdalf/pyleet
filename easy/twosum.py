@@ -26,17 +26,19 @@ Constraints:
   Only one valid answer exists.
 """
 
-def two_sum(nums: list[int], target: int) -> list[int]:
-  seen = {}
-  for i, num in enumerate(nums):
-    needed = target - num
-    if needed in seen:
-      return [seen[needed], i]
-    seen[num] = i
-  return []
 
-print(two_sum([2,7,11,15], 9))
-print(two_sum([3,2,4], 6))
-print(two_sum([3,3], 6))
-print(two_sum([-1,-2,-3,-4,-5], -8))
-print(two_sum([-1,-2,-3,-4,-5], -8))
+def two_sum(nums: list[int], target: int) -> list[int]:
+    seen = {}
+    for i, num in enumerate(nums):
+        needed = target - num
+        if needed in seen:
+            return [seen[needed], i]
+        seen[num] = i
+    return []
+
+
+print(two_sum([2, 7, 11, 15], 9))
+print(two_sum([3, 2, 4], 6))
+print(two_sum([3, 3], 6))
+print(two_sum([-1, -2, -3, -4, -5], -8))
+print(two_sum([-1, -2, -3, -4, -5], -8))
